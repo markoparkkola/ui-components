@@ -1,0 +1,28 @@
+DataGrid
+
+<template>
+  ..
+  <data-grid title="Recipients" :gridData="someData" @selected="rowSelected" ></data-grid>
+  ..
+</template>
+
+<script>
+import DataGrid from './DataGrid.vue'
+
+export default {
+  name: 'something',
+  components: {
+    DataGrid
+  },
+  data() {
+    return {
+      someData: [{a: 1, b: 1, c: 1},{a: 2, b: 2, c: 2}]
+    }
+  },
+  methods: {
+    rowSelected(row) {
+      console.log(row)
+    }
+  }
+}
+</script>
